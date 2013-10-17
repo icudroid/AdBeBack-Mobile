@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="S\'inscrire" android:id="@+id/main_register"></item>
+<item android:title="Se connecter" android:id="@+id/main_login"></item>
+<item android:title="Derniers gagnants" android:id="@+id/main_last_winners"></item>
+<item android:title="A propos" android:id="@+id/main_about"></item>
+<item android:title="Jouer" android:id="@+id/main_play"></item>
+<item android:title="Mes gains" android:id="@+id/main_won_object"></item>
+<item android:title="Mes amis" android:id="@+id/main_my_friends"></item>
+</menu>

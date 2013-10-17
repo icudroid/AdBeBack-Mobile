@@ -1,0 +1,56 @@
+package fr.k2i.adbeback.business.blindtest;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import fr.k2i.adbeback.business.jackpot.QuestionBean;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class BlindTestBean {
+	private long idBlindTest;
+	private long beginIn;
+	private long idJackPot;
+	private List<QuestionBean>questions;
+	
+	public BlindTestBean(JSONObject obj) throws JSONException {
+		idBlindTest = obj.getLong("idBlindTest");
+		beginIn = obj.getLong("beginIn");
+		idJackPot = obj.getLong("idJackPot");
+		JSONArray qs = obj.getJSONArray("questions");
+		questions = new ArrayList<QuestionBean>(qs.length());
+		for (int i = 0; i < qs.length(); i++) {
+			questions.add(new QuestionBean(qs.getJSONObject(i)));
+		}
+	}
+	public long getIdBlindTest() {
+		return idBlindTest;
+	}
+	public void setIdBlindTest(long idBlindTest) {
+		this.idBlindTest = idBlindTest;
+	}
+	public long getBeginIn() {
+		return beginIn;
+	}
+	public void setBeginIn(long beginIn) {
+		this.beginIn = beginIn;
+	}
+	public long getIdJackPot() {
+		return idJackPot;
+	}
+	public void setIdJackPot(long idJackPot) {
+		this.idJackPot = idJackPot;
+	}
+	public List<QuestionBean> getQuestions() {
+		return questions;
+	}
+	public void setQuestions(List<QuestionBean> questions) {
+		this.questions = questions;
+	}
+}

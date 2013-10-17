@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content">
+	<TextView android:text="Rechercher : " android:id="@+id/LabelLookForFriends"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_alignBaseline="@+id/TextLookForFriends"></TextView>
+	<EditText android:id="@+id/TextLookForFriends" android:text=""
+		android:layout_width="fill_parent" android:layout_toRightOf="@+id/LabelLookForFriends"
+		android:layout_height="wrap_content"></EditText>
+	<ListView android:layout_below="@+id/TextLookForFriends"
+		android:layout_width="wrap_content"
+		android:id="@android:id/list" android:layout_height="fill_parent"></ListView>
+</RelativeLayout>

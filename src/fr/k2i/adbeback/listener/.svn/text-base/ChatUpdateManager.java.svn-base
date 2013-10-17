@@ -1,0 +1,22 @@
+package fr.k2i.adbeback.listener;
+
+
+public class ChatUpdateManager {
+	
+	private static ChatUpateListener listener = null;
+
+	public void setUpdateListener(ChatUpateListener listener) {
+		this.listener  = listener;
+	}
+	
+	private void fireEvent() {
+		if(listener != null){
+			ChatUpdateEvent evt  = new ChatUpdateEvent(this);
+			listener.onChatUpdated(evt);
+		}
+	}
+
+	public synchronized void updateChat(){
+		fireEvent();
+	}
+}

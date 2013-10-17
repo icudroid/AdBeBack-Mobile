@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/background_all">
+
+
+	<TextView android:id="@+id/LabelMain01" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textStyle="bold"
+		android:layout_centerHorizontal="true" android:layout_marginTop="15dp"
+		android:text="Jeu de rapidité basé sur la" android:textSize="20dp"
+		android:textColor="@color/main_txt_color_white"></TextView>
+
+	<TextView android:id="@+id/LabelMain03" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textStyle="bold"
+		android:layout_centerHorizontal="true" android:text="publicité"
+		android:textColor="@color/main_txt_color_white" android:layout_below="@+id/LabelMain01"
+		android:textSize="30dp" android:layout_marginTop="25dp"></TextView>
+
+	<LinearLayout android:layout_centerInParent="true"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:id="@+id/SplashScreenLoaderLayout">
+		<ProgressBar android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/ProgressBarLoader"
+			style="?android:attr/progressBarStyleSmall"></ProgressBar>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/SplashScreenLabel"
+			android:textColor="@color/main_txt_color_white" android:text="Mise à jour de la base"></TextView>
+
+	
+</LinearLayout>
+
+	<ImageView android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_centerHorizontal="true"
+		android:id="@+id/Logo" android:layout_alignParentBottom="true" android:layout_marginBottom="25dp" android:src="@drawable/logo4"></ImageView>
+
+
+	
+
+</RelativeLayout>

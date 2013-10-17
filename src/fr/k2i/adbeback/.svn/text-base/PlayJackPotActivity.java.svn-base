@@ -1,0 +1,298 @@
+package fr.k2i.adbeback;
+
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.AlertDialog;
+import android.app.ListActivity;
+import android.app.AlertDialog.Builder;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.AdapterView.OnItemClickListener;
+import fr.k2i.adbeback.business.JackPotQuestionBean;
+import fr.k2i.adbeback.business.JackPotResultBean;
+import fr.k2i.adbeback.connexion.ServerConnexion;
+
+public class PlayJackPotActivity extends ListActivity{
+	
+	private JackPotQuestionBean jackpot;
+	private Long idJackPot;
+	private Long duration = 30000L;
+	private Long start;
+	private Handler timer = new Handler();
+	private Runnable taskProgressBar = new Runnable() {
+		public void run() {
+			Long now = new Date().getTime();
+			double durationDouble = duration;
+			int p = (int) (((now-start)/durationDouble)*10000);
+			Long d = ((duration -(now-start))/1000);
+			String s = (((d%60)<10)?"0":"") + ((d%60));
+			String m = (((d/60)<10)?"0":"")+((d/60));
+			setProgress(p);
+			setTitle("JackPot : ("+m+":"+s+")");
+			if(p>=10000){
+				timer.removeCallbacks(taskProgressBar);
+				toLate();
+			}else{
+				timer.postDelayed(this,200);
+
+			}
+		}
+
+	};
+	
+    private class ResponseListAdapter extends BaseAdapter {
+    	
+    	private LayoutInflater mInflater;
+    	
+        public ResponseListAdapter(Context context) {
+        	mInflater = LayoutInflater.from(context);
+        }
+
+        /**
+         * The number of items in the list is determined by the number of speeches
+         * in our array.
+         * 
+         * @see android.widget.ListAdapter#getCount()
+         */
+        public int getCount() {
+            return jackpot.getReponses().size();
+        }
+
+        /**
+         * Since the data comes from an array, just returning the index is
+         * sufficent to get at the data. If we were using a more complex data
+         * structure, we would return whatever object represents one row in the
+         * list.
+         * 
+         * @see android.widget.ListAdapter#getItem(int)
+         */
+        public Object getItem(int position) {
+            return position;
+        }
+
+        /**
+         * Use the array index as a unique id.
+         * 
+         * @see android.widget.ListAdapter#getItemId(int)
+         */
+        public long getItemId(int position) {
+            return position;
+        }
+
+        /**
+         * Make a SpeechView to hold each row.
+         * 
+         * @see android.widget.ListAdapter#getView(int, android.view.View,
+         *      android.view.ViewGroup)
+         */
+        public View getView(int position, View convertView, ViewGroup parent) {
+            // A ViewHolder keeps references to children views to avoid unneccessary calls
+            // to findViewById() on each row.
+            ViewHolder holder;
+
+            // When convertView is not null, we can reuse it directly, there is no need
+            // to reinflate it. We only inflate a new View when the convertView supplied
+            // by ListView is null.
+            if (convertView == null) {
+                convertView = mInflater.inflate(R.layout.list_item_jackpot, null);
+
+                // Creates a ViewHolder and store references to the two children views
+                // we want to bind data to.
+                holder = new ViewHolder();
+                holder.responseLetter = (TextView) convertView.findViewById(R.id.JackpotItemLabelQuestionLetter);
+                holder.response = (TextView) convertView.findViewById(R.id.JackpotItemLabelQuestion);
+
+                convertView.setTag(holder);
+            } else {
+                // Get the ViewHolder back to get fast access to the TextView
+                // and the ImageView.
+                holder = (ViewHolder) convertView.getTag();
+            }
+
+            // Bind the data efficiently with the holder.
+            	holder.responseLetter.setText(mTitles[position]);
+            	holder.response.setText(jackpot.getReponses().get(position).getResponse());
+            return convertView;
+        }
+        
+		class ViewHolder {
+			TextView responseLetter;
+			TextView response;
+		}
+        
+        private String[] mTitles = 
+        {
+                "Réponse A : ",   
+                "Réponse B : ",
+                "Réponse C : ",       
+                "Réponse D : ",
+                "Réponse E : ",
+                "Réponse F : ",  
+                "Réponse G : ",
+                "Réponse H : "
+        };
+
+    }
+    
+	private void toLate() {
+        Map<String, String>params = new HashMap<String, String>();
+        params.put("toLateJackpot", "");
+        params.put("idJackPot", jackpot.toString());
+		try {
+			ServerConnexion.sendRequest("Android/TVJackPot.htm", params);
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (LoginException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Builder dialog = new AlertDialog.Builder(PlayJackPotActivity.this)
+        .setIcon(R.drawable.alert_dialog_icon)
+        .setTitle("Perdu")
+        .setMessage("Désolé le temps est écoulé")
+        .setPositiveButton("Fermer", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				PlayJackPotActivity.this.finish();
+			}
+		});
+		dialog.show();
+		
+	}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_PROGRESS);
+        setContentView(R.layout.play_jackpot);
+        setProgress(0);
+        setSecondaryProgress(0);
+        
+        
+        //obtenir la liste des question
+        Bundle objetbunble  = this.getIntent().getExtras(); 
+        idJackPot = objetbunble .getLong("idJackPot");
+
+        Map<String, String>params = new HashMap<String, String>();
+        params.put("getJackPotChanel", "");
+        params.put("idJackPot", idJackPot.toString());
+
+		try {
+			JSONObject obj = ServerConnexion.sendRequest("Android/TVJackPot.htm", params);
+			jackpot = new JackPotQuestionBean(obj);
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (LoginException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        setListAdapter(new ResponseListAdapter(this));
+        
+        final ListView listView = getListView();
+
+        listView.setItemsCanFocus(false);
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        
+        listView.setOnItemClickListener(new OnItemClickListener() {
+
+			public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
+				timer.removeCallbacks(taskProgressBar);
+				//idJackPot
+				//idResponse
+		        Map<String, String>params = new HashMap<String, String>();
+		        params.put("doResponseJackpot", "");
+		        params.put("idJackPot", idJackPot.toString());
+		        params.put("idResponse", new Long(jackpot.getReponses().get(position).getIdResponse()).toString());
+
+				try {
+					JSONObject obj = ServerConnexion.sendRequest("Android/TVJackPot.htm", params);
+					JackPotResultBean jsRes  = new JackPotResultBean(obj);
+					//ouvrir un panneau pour le résultat et fermer quand l'utilisateur ferme le panneau
+					String resJp = null;
+					String title = null;
+					if(jsRes.isWin()){
+						title = "Bravo !!!";
+						resJp = "Vous venez de gagner le Jackpot d'une valeur de "+jsRes.getValue()+" €";
+					}else{
+						title = "Perdu !!!";
+						resJp = "Mauvaise réponse.";
+					}
+					
+					Builder dialog = new AlertDialog.Builder(PlayJackPotActivity.this)
+	                .setIcon(R.drawable.alert_dialog_icon)
+	                .setTitle(title)
+	                .setMessage(resJp)
+	                .setPositiveButton("Fermer", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							PlayJackPotActivity.this.finish();
+						}
+					});
+					dialog.show();
+					
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (URISyntaxException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (LoginException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+		});
+        
+        TextView question = (TextView) findViewById(R.id.TextQuestion);
+        question.setText(jackpot.getQuestion());
+        start = new Date().getTime();
+        //met le compte a rebourg
+		timer.removeCallbacks(taskProgressBar);
+		timer.postDelayed(taskProgressBar, 200);
+    }
+
+}
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hello">Hello World, MainActivity!</string>
+	<string name="app_name">AD BeBack</string>
+	<string name="TITLE_CHANEL_CHOOSER">Choisir une chaîne</string>
+	<string name="wait_dialog">Pas de publicité actuellement.
+Le système va retenter dans 1 minute.</string>
+	<string name="alert_dialog_cancel">Annuler</string>
+	<string name="login_dialog_ok">Se connecter</string>
+	<string name="login_dialog_cancel">Annuler</string>
+	<string name="login_dialog_title">Connexion au serveur</string>
+	<string name="err_dialog_title">Erreur</string>
+	<string name="err_dialog_message">Pseudo ou mot de passe incorrect.</string>
+	<string name="err_dialog_ok">OK</string>
+	<string name="about_dialog_title">A propos d\'AD BeBack</string>
+	<string name="about_dialog_ok">OK</string>
+	<string name="about_dialog_message">AD BeBack est un jeu de rapidité qui permet de faire gagner des cadeaux à chaque espace publicitaire.
+Vous aussi tentez votre chance. Pour commencer, cliquez sur "jouer", choisissez la chaîne de télévision que vous regardez.
+Le jeu débutera en même temps que l\'espace publicitaire.
+Ce sera à votre tour de jouer en sélectionnant le bon logo associé à la publicité.
+A la fin des publicités vous saurez si vous avez gagné.
+	</string>
+<string name="explainGame">
+Lors de l\'espace publicitaire, trois logos de marque différentes vous seront proposés.\n\n
+A vous de sélectionner le logo correspondant à la publicité.\n\n
+A la fin de l\'espace publicitaire les meilleurs joueurs remporteront des cadeaux.\n\n
+Plus vous avez d\'adversaires, plus beaux seront les cadeaux.\n\n
+Le meilleur pourra remporter le JACKPOT de la chaîne en répondant correctement à une question.\n\n
+Bonne chance.
+</string>
+
+    <string name="local_service_started">AdBeBack</string>
+    <string name="local_service_label">Une publicité va commencer.</string>
+	<string name="type_to_compose_text_enter_to_send" msgid="7553404984078924360">"Saisissez votre message"</string>
+	<string name="send" msgid="4589898724889248486">"Envoyer"</string>
+	
+	<string name="replay_dialog_title">Rejouez ?</string>
+	<string name="replay_dialog_message">Voulez vous rejouer sur la même Chaîne de télévision ?</string>
+	<string name="replay_dialog_yes">Oui</string>
+	<string name="replay_dialog_no">No</string>
+	<string name="replay_dialog_yes_other">Oui sur une autre chaîne</string>
+	<string name="friends_to_validate">Vos amis AdBeback</string>
+	<string name="friends_to_validate_label">Vous avez des amis en attente de validation.</string>
+</resources>

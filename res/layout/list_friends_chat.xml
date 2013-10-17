@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@color/white" android:paddingBottom="5dp">
+	<TextView android:text="PSEUDO" android:id="@+id/TextPseudo"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textColor="@color/btn_color" android:textSize="14dp"
+		android:textStyle="bold" android:layout_marginLeft="5dp"></TextView>
+
+	<TextView android:text="CHAT" android:layout_height="wrap_content"
+		android:layout_below="@+id/TextPseudo" android:id="@+id/TextChat"
+		android:layout_width="wrap_content" android:layout_marginLeft="15dp"
+		android:layout_marginRight="15dp"
+		android:textColor="@color/chat"></TextView>
+
+	<TextView android:text="Envoyé à : " android:layout_height="wrap_content"
+		android:layout_below="@+id/TextChat" android:id="@+id/LabelSendAt"
+		android:layout_width="wrap_content" android:layout_marginLeft="5dp" android:textSize="8dp"></TextView>
+
+	<TextView android:text="00:00:00" android:layout_height="wrap_content"
+		android:layout_below="@+id/TextChat" android:id="@+id/TextSendAt"
+		android:layout_toRightOf="@+id/LabelSendAt" android:layout_width="wrap_content"
+		android:textStyle="bold" android:textSize="8dp"></TextView>
+
+	<TextView android:text="a dit :" android:layout_height="wrap_content"
+		android:id="@+id/LabelSayd" android:layout_toRightOf="@+id/TextPseudo"
+		android:layout_width="wrap_content" android:layout_marginLeft="5dp"
+		android:textSize="14dp"></TextView>
+
+
+
+</RelativeLayout>

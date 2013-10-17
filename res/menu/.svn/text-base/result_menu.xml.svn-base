@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:title="Retour" android:id="@+id/itemRetour"></item>
+<item android:title="Voir le classement" android:id="@+id/itemShowClassement"></item>
+</menu>

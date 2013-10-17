@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:background="@color/main_txt_color_white">
+	
+	<ImageView android:background="#66FFFFFF"
+		android:adjustViewBounds="true" android:maxWidth="100dp"
+		android:maxHeight="100dp" android:layout_width="100dp"
+		android:layout_height="100dp" android:id="@+id/DialogWonObjItemLogo"
+		android:layout_margin="5dp" android:layout_alignParentRight="true" />
+	
+	<TableLayout android:layout_below="@+id/DialogWonObjItemLogo"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		xmlns:android="http://schemas.android.com/apk/res/android" android:padding="12dp"
+		android:stretchColumns="1">
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemLabelDate"
+				android:text="Gagné le : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemFielDate"
+				android:text="XX/XX/YYYY" android:layout_marginLeft="3dp"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemLabelName"
+				android:text="Nom : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemFielName"
+				android:text="NAME" android:layout_marginLeft="3dp"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemLabelValue"
+				android:text="Valeur : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemFielValue"
+				android:text="X €" android:layout_marginLeft="3dp"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemLabelDesc"
+				android:text="Description : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="150dp"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemFielDesc"
+				android:text="DESC"
+				android:layout_marginLeft="3dp" android:textColor="@color/item_field_color"
+				android:lines="4" android:scrollbars="vertical"></TextView>
+		</TableRow>
+
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemLabelStatus"
+				android:text="Statut : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/DialogWonObjItemFielStatus"
+				android:text="STATUS" android:layout_marginLeft="3dp"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+	</TableLayout>
+
+</RelativeLayout>
+

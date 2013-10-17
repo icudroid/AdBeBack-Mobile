@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="90dp"
+	android:gravity="center_vertical">
+
+	<ImageView android:id="@+id/AvatarFriend"
+		android:layout_width="90dp" android:layout_height="90dp"
+		android:background="@color/main_txt_color_white" android:src="@drawable/avatar_nophoto"></ImageView>
+
+	<ImageView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/ImageIsValidated"
+		android:src="@drawable/valider30_30" android:layout_marginLeft="60dp" android:layout_alignBottom="@+id/AvatarFriend"></ImageView>
+
+	<RelativeLayout android:id="@+id/RelativeLayoutFriend"
+		android:layout_toRightOf="@+id/AvatarFriend" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:gravity="center_vertical">
+		<TextView android:text="Pseudo" android:id="@+id/TextSpeudo"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			 android:textColor="@color/white" android:gravity="right"
+			android:textStyle="bold" android:layout_marginLeft="5dp"></TextView>
+	</RelativeLayout>
+
+	<RelativeLayout android:id="@+id/RelativeLayoutFriend1"
+		android:layout_width="wrap_content" android:layout_alignParentRight="true"
+		android:layout_height="90dp" android:gravity="center_vertical">
+
+		<ImageButton android:id="@+id/BtnRemoveFriend"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/delete_friend"></ImageButton>
+
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@color/background_all">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:background="@color/background_all">
+
+		<TextView android:text="TITLE" android:id="@+id/AdObjectTitle"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="@color/white" android:textSize="18dp"
+			android:gravity="center"></TextView>
+
+		<Gallery android:id="@+id/galleryAdObject"
+			android:layout_width="fill_parent" android:layout_height="200dp"
+			android:layout_below="@+id/AdObjectTitle" />
+
+		<TextView android:text="Descritpion : " android:id="@+id/AdObjectLabelDesc"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="@color/white" android:textSize="14dp"
+			android:layout_below="@+id/galleryAdObject"></TextView>
+
+		<TextView android:text="desc" android:id="@+id/AdObjectDesc"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="@color/white" android:textSize="12dp"
+			android:layout_below="@+id/AdObjectLabelDesc" android:padding="10dp"></TextView>
+
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:background="@color/background_all"
+			android:gravity="center"
+			android:layout_below="@+id/AdObjectDesc"
+			>
+			<Button android:text="Je suis intérressé"
+				android:layout_below="@+id/AdObjectDesc" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/BtnAdObjectInterested"></Button>
+		</RelativeLayout>
+	</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="fr.k2i.adbeback" android:versionName="0.0.1" android:versionCode="22">
+	<application android:icon="@drawable/icon" android:label="@string/app_name" android:debuggable="false">
+		<activity android:name=".MainActivity" android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" /> 
+                <category android:name="android.intent.category.VIEW" /> 
+                <category android:name="android.intent.category.LAUNCHER" />
+            
+
+</intent-filter>
+		</activity>
+
+		<activity android:label="@string/TITLE_CHANEL_CHOOSER"
+			android:name="ChanelChooserActvity"></activity>
+
+		
+
+		<activity android:name="ResultActivity"
+			android:screenOrientation="portrait"></activity>
+
+		<activity android:name="PlayJackPotActivity" android:label="JackPot"
+			android:screenOrientation="portrait" android:launchMode="singleInstance"></activity>
+
+		<activity android:name="RegisterActivity" android:screenOrientation="portrait" android:label="Inscription à Ad BeBack"></activity>
+
+		<activity android:name="LastWinnersActivity" android:label="Les derniers gagnants"></activity>
+
+		<activity android:name="WonObjectActivity" android:label="Mes gains"></activity>
+		<activity android:name=".SplashScreenActivity" android:theme="@android:style/Theme.NoTitleBar">
+    		 <intent-filter>
+    		 	<action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />       
+            </intent-filter>
+		</activity>
+	<activity android:name="EmptyActivity"></activity>
+<service android:name=".service.FindGameService"></service>
+<activity android:name="FriendsActivity" android:label="Mes amis"></activity>
+<activity android:name="ChatActivity"></activity>
+<activity android:name="FirendsScoreActivity"></activity>
+<activity android:name="FindFriendActvity" android:label="Trouvez vos amis ..."></activity>
+<activity android:name="ValidateFriendActivity" android:label="En attente de validation"></activity>
+<activity android:name="TabGame" android:screenOrientation="portrait">
+
+</activity>
+
+</application>
+
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-sdk android:minSdkVersion="3"></uses-sdk>
+
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.DEVICE_POWER"></uses-permission>
+	<uses-permission android:name="android.permission.FLASHLIGHT"></uses-permission>
+	<uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"></uses-permission>
+
+</manifest> 

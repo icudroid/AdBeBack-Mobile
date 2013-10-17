@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:background="@color/main_txt_color_white">
+
+	<TableLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+		android:stretchColumns="1" android:padding="12dp">
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemLabelPseudo"
+				android:text="Pseudo :" android:textColor="@color/btn_color"
+				android:gravity="right" android:textStyle="bold"></TextView>
+			<TextView android:layout_marginLeft="5dp"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemFieldPseudo"
+				android:text="Pseudo" android:layout_width="wrap_content"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemLabelWin"
+				android:text="Gain :" android:textColor="@color/btn_color"
+				android:gravity="right" android:textStyle="bold"></TextView>
+			<TextView android:layout_marginLeft="5dp"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemFieldWin"
+				android:text="GAIN" android:layout_width="wrap_content"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemLabelValue"
+				android:text="Valeur :" android:textColor="@color/btn_color"
+				android:gravity="right" android:textStyle="bold"></TextView>
+			<TextView android:layout_marginLeft="5dp"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemFieldValue"
+				android:text="XX euros" android:layout_width="wrap_content"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+		
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemLabelWinDate"
+				android:text="Gagné le " android:textColor="@color/btn_color"
+				android:gravity="right" android:textStyle="bold"></TextView>
+			<TextView android:layout_marginLeft="5dp"
+				android:layout_height="wrap_content" android:id="@+id/WinnerItemFieldWinDate"
+				android:text="00/00/0000" android:layout_width="wrap_content"
+				android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+		
+	</TableLayout>
+
+	<ImageView android:src="@drawable/logo" android:background="#66FFFFFF"
+		android:adjustViewBounds="true" android:maxWidth="80dp"
+		android:maxHeight="80dp" android:layout_width="80dp"
+		android:layout_height="80dp" android:id="@+id/WinnerItemImgWinOn"
+		android:layout_margin="5dp" android:layout_alignParentRight="true" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/background_all">
+
+	<ImageView android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_centerHorizontal="true"
+		android:id="@+id/Logo"
+		android:layout_marginTop="15dp" android:src="@drawable/logo4"></ImageView>
+
+	<TextView android:id="@+id/LabelMain01" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:textStyle="bold"
+		android:layout_centerHorizontal="true" android:layout_marginTop="15dp"
+		android:text="Le premier jeu qui marie amusement et publicité"
+		android:textSize="20dp" android:textColor="@color/main_txt_color_white"
+		android:gravity="center" android:paddingBottom="15dp"
+		android:layout_below="@+id/Logo"></TextView>
+
+	<Button android:layout_height="wrap_content" android:text="Je m'inscris avec Facebook"
+		android:layout_centerHorizontal="true" android:layout_below="@+id/LabelMain01"
+		android:layout_width="180dp" android:id="@+id/BtnRegisterFB"
+		android:paddingTop="15dp"></Button>
+
+	<TextView android:layout_centerHorizontal="true" android:id="@+id/MainTextPlayWith"
+		android:layout_below="@+id/BtnRegisterFB" android:text="Jouer sur :"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:textColor="@color/white" android:gravity="center"
+		android:textSize="18dp"></TextView>
+		
+	<LinearLayout android:layout_centerHorizontal="true"
+		android:id="@+id/LinearLayout01" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/MainTextPlayWith">
+		<Button android:layout_height="wrap_content"
+			android:layout_width="100dp" android:text="TV" android:id="@+id/BtnPlayTV"></Button>
+		<Button android:layout_height="wrap_content"
+			android:layout_width="100dp" android:text="Radio" android:id="@+id/BtnPlayRadio"></Button>
+		<Button android:layout_height="wrap_content"
+			android:layout_width="100dp" android:text="VOD" android:id="@+id/BtnPlayVod"></Button>
+	</LinearLayout>
+
+</RelativeLayout>

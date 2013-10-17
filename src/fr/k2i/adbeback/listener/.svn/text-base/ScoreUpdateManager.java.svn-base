@@ -1,0 +1,22 @@
+package fr.k2i.adbeback.listener;
+
+
+public class ScoreUpdateManager {
+	
+	private static ScoreUpateListener listener = null;
+
+	public void setUpdateListener(ScoreUpateListener listener) {
+		this.listener = listener;
+	}
+	
+	private void fireEvent() {
+		if(listener != null){
+			ScoreUpdateEvent evt  = new ScoreUpdateEvent(this);
+			listener.onScoreUpdated(evt);
+       }
+	}
+
+	public synchronized void updateScore(){
+		fireEvent();
+	}
+}

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@color/background_all">
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content" android:layout_height="wrap_content">
+		
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutPseudo">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/registerLabelPseudo"
+				android:text="Pseudo *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/registerLabelPseudo" android:id="@+id/RegisterErrPseudo" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>
+			<EditText android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/RegisterErrPseudo"
+				android:layout_width="fill_parent" android:layout_marginRight="5dp"
+				android:id="@+id/RegisterTxtPseudo"></EditText>
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutSex" android:layout_below="@+id/RegisterLayoutPseudo">
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/registerSexLabel"
+				android:text="Civilité *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<Spinner android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/registerSexLabel"
+				android:layout_width="fill_parent" android:layout_marginRight="5dp"
+				android:id="@+id/RegisterSexSpinner"></Spinner>
+		</LinearLayout>
+
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutFirstName" android:layout_below="@+id/RegisterLayoutSex">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterFirstNameLabel"
+				android:text="Prénom *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/RegisterFirstNameLabel" android:id="@+id/RegisterErrFirstName" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>				
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterErrFirstName"
+				android:id="@+id/RegisterFirstNameTxt" android:layout_width="fill_parent"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>
+
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutLastName" android:layout_below="@+id/RegisterLayoutFirstName">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterLastNameLabel"
+				android:text="Nom *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/RegisterLastNameLabel" android:id="@+id/RegisterErrLastName" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>	
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterErrLastName"
+				android:id="@+id/RegisterLastNameTxt" android:layout_width="fill_parent"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutEmail" android:layout_below="@+id/RegisterLayoutLastName">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterEmailLabel"
+				android:text="Email *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/RegisterEmailLabel" android:id="@+id/RegisterErrEmail" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>				
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterErrEmail"
+				android:id="@+id/RegisterEmailTxt" android:layout_width="fill_parent"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutAdd1" android:layout_below="@+id/RegisterLayoutEmail">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterAdd1Label"
+				android:text="Adresse *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/RegisterAdd1Label" android:id="@+id/RegisterErrAdd1" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>				
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterErrAdd1"
+				android:id="@+id/RegisterAdd1Txt" android:layout_width="fill_parent"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>
+
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutAdd2" android:layout_below="@+id/RegisterLayoutAdd1">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterAdd2Label"
+				android:text="Adresse suite :" android:width="110dp" android:textColor="@color/white"></TextView>
+				
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterAdd2Label"
+				android:id="@+id/RegisterAdd2Txt" android:layout_width="fill_parent"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>
+
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutZipCode" android:layout_below="@+id/RegisterLayoutAdd2">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterZipCodeLabel"
+				android:text="Code postal *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/RegisterZipCodeLabel" android:id="@+id/RegisterErrZipCode" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>				
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterErrZipCode"
+				android:id="@+id/RegisterZipCodeTxt" android:layout_width="fill_parent"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>
+
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutCity" android:layout_below="@+id/RegisterLayoutZipCode">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterCityLabel"
+				android:text="Ville *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/RegisterCityLabel" android:id="@+id/RegisterErrCity" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>				
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterErrCity"
+				android:id="@+id/RegisterCityTxt" android:layout_width="fill_parent"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>
+
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutCountry" android:layout_below="@+id/RegisterLayoutCity">
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/registerCountryLabel"
+				android:text="Pays *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<Spinner android:layout_height="wrap_content"
+				android:layout_toRightOf="@+id/registerCountryLabel"
+				android:layout_width="fill_parent" android:layout_marginRight="5dp"
+				android:id="@+id/RegisterCountrySpinner"></Spinner>
+		</LinearLayout>
+
+
+		<TextView android:layout_width="wrap_content" android:layout_below="@+id/RegisterLayoutCountry"
+			android:layout_height="wrap_content" android:id="@+id/RegisterBirthdayLabel"
+			android:text="Date de naissance *:" android:width="110dp" android:textColor="@color/white"></TextView>
+		
+		
+		<DatePicker android:id="@+id/RegisterBirthday" android:layout_below="@+id/RegisterBirthdayLabel"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true"></DatePicker>
+
+		<ImageView android:layout_toLeftOf="@+id/RegisterBirthday" android:layout_below="@+id/RegisterBirthdayLabel" android:id="@+id/RegisterErrBirthDay" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>
+		
+<!--		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--			android:layout_width="fill_parent" android:layout_height="wrap_content"-->
+<!--			android:id="@+id/RegisterLayoutBirthday" android:layout_below="@+id/RegisterLayoutCountry">-->
+<!--			<TextView android:layout_width="wrap_content"-->
+<!--				android:layout_height="wrap_content" android:id="@+id/RegisterBirthdayLabel"-->
+<!--				android:text="Naissance *:" android:width="110dp"></TextView>-->
+<!--				-->
+<!--			<DatePicker android:id="@+id/RegisterBirthday" android:layout_toRightOf="@+id/RegisterBirthdayLabel"-->
+<!--				android:layout_width="wrap_content" android:layout_height="wrap_content"></DatePicker>-->
+<!--		</LinearLayout>-->
+		
+		
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:id="@+id/RegisterLayoutPwd" android:layout_below="@+id/RegisterBirthday">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/RegisterPwdLabel"
+				android:text="Mot de passe *:" android:width="110dp" android:textColor="@color/white"></TextView>
+			<ImageView android:layout_toRightOf="@+id/RegisterPwdLabel" android:id="@+id/RegisterErrPwd" android:layout_width="24dp" android:layout_height="24dp" android:visibility="gone" android:src="@drawable/alert_dialog_icon"></ImageView>				
+			<EditText 
+				android:layout_height="wrap_content" android:layout_toRightOf="@+id/RegisterErrPwd"
+				android:id="@+id/RegisterPwdTxt" android:layout_width="fill_parent" android:password="true"
+				android:layout_marginRight="5dp"></EditText>
+		</LinearLayout>	
+		
+		<Button android:layout_below="@+id/RegisterLayoutPwd"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:id="@+id/RegisterBtn" android:text="Valider mon inscription"
+			android:layout_alignParentRight="true" android:textColor="@color/btn_color" android:layout_margin="5dp"></Button>
+		
+	</RelativeLayout>
+</ScrollView>

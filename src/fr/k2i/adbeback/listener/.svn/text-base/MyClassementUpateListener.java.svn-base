@@ -1,0 +1,16 @@
+package fr.k2i.adbeback.listener;
+
+import java.util.EventListener;
+
+public abstract class MyClassementUpateListener implements EventListener {
+	private String pseudo;
+	
+	public String getPseudo(){
+		return pseudo;
+	}
+	public MyClassementUpateListener(String pseudo) {
+		this.pseudo = pseudo;
+	}
+	
+	abstract public void onMyClassementUpdated(MyClassementUpdateEvent evt);
+}

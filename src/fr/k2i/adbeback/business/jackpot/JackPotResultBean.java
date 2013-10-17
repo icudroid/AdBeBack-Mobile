@@ -1,0 +1,33 @@
+package fr.k2i.adbeback.business.jackpot;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class JackPotResultBean {
+	private double value;
+	private String currency;
+	private boolean win;
+	public JackPotResultBean(JSONObject obj) throws JSONException {
+		value = obj.getDouble("value");
+		currency = obj.getString("currency");
+		win = obj.getBoolean("win");
+	}
+	public double getValue() {
+		return value;
+	}
+	public void setValue(double value) {
+		this.value = value;
+	}
+	public String getCurrency() {
+		return currency;
+	}
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+	public boolean isWin() {
+		return win;
+	}
+	public void setWin(boolean win) {
+		this.win = win;
+	}
+}

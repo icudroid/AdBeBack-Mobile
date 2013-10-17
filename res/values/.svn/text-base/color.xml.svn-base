@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="main_txt_color">#15428B</color>
+	<color name="main_txt_color_white">#FFFFFF</color>
+	<color name="btn_color">#005EA8</color>
+	<color name="item_field_color">#999999</color>
+	<color name="error_login">#FF0000</color>
+	<color name="lost_color">#FFFFFF</color>
+	<color name="button_play_jp">#005EA8</color>
+	<color name="bkScore">#bfb6b6</color>
+	<color name="black">#000000</color>
+	<color name="white">#FFFFFF</color>
+	<color name="chat">#5e5b5b</color>
+</resources>

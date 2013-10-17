@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:background="@color/main_txt_color_white">
+	<TableLayout android:layout_below="@+id/WonObjItemLabelValue"
+		android:id="@+id/TableLayout01" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+		android:stretchColumns="1">
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WonObjItemLabelDate"
+				android:text="Gagné le : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WonObjItemFielDate"
+				android:text="XX/XX/YYYY" android:layout_marginLeft="3dp" android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WonObjItemLabelValue"
+				android:text="Valeur : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WonObjItemFielValue"
+				android:text="X €" android:layout_marginLeft="3dp" android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+		<TableRow android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WonObjItemLabelStatus"
+				android:text="Statut : " android:textColor="@color/btn_color"
+				android:textStyle="bold" android:gravity="right"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/WonObjItemFielStatus"
+				android:text="STATUS" android:layout_marginLeft="3dp" android:textColor="@color/item_field_color"></TextView>
+		</TableRow>
+	</TableLayout>
+
+	<ImageView android:background="#66FFFFFF"
+		android:adjustViewBounds="true" android:maxWidth="45dp"
+		android:maxHeight="45dp" android:layout_width="45dp"
+		android:layout_height="45dp" android:id="@+id/WonObjItemLogo"
+		android:layout_margin="5dp" android:layout_alignParentRight="true" />
+
+</RelativeLayout>

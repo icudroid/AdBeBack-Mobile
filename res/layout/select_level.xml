@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:background="@color/main_txt_color_white">
+	
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="40dp" android:id="@+id/SelectLevelNum"
+		android:text="Niveau : 1" android:textColor="@color/btn_color"
+		android:layout_centerHorizontal="true" android:textSize="18dp"
+		android:background="@drawable/responsebk"></TextView>
+
+	<TextView android:layout_height="wrap_content"
+		android:id="@+id/SelectLevelExplain" android:layout_below="@+id/SelectLevelNum"
+		android:layout_width="fill_parent" android:text="3 Logos"
+		android:textColor="@color/btn_color" android:textSize="20dp"
+		android:paddingBottom="5dp" android:layout_marginTop="5dp"></TextView>
+
+</RelativeLayout>

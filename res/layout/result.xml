@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:background="@color/background_all">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/LabelClassement"
+			android:text="Votre classement : " android:layout_margin="15dp"
+			android:textSize="22dp" android:textColor="@color/white"></TextView>
+		<TextView android:layout_below="@+id/LabelClassement"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_centerHorizontal="true" android:id="@+id/TextClassement"
+			android:text="X / Y" android:textSize="18dp"  android:textColor="@color/white"></TextView>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/LabelScore"
+			android:layout_below="@+id/TextClassement" android:text="Votre score : "
+			android:layout_margin="15dp" android:textSize="22dp"  android:textColor="@color/white"></TextView>
+		<TextView android:layout_below="@+id/LabelScore"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_centerHorizontal="true" android:id="@+id/TextScore"
+			android:text="X" android:textSize="18dp"  android:textColor="@color/white"></TextView>
+
+		<TextView android:layout_below="@+id/TextScore"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:textSize="22dp" android:layout_margin="15dp" android:id="@+id/LabelLot"
+			android:text="Votre Gain :" android:textColor="@color/white"></TextView>
+
+		<RelativeLayout android:layout_below="@+id/LabelLot"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:id="@+id/LayoutLot" android:visibility="invisible">
+			<ImageView android:id="@+id/ImageLot" android:maxHeight="80dp"
+				android:maxWidth="80dp" android:layout_height="100dp"
+				android:layout_width="100dp"></ImageView>
+
+			<TextView android:layout_toRightOf="@+id/ImageLot"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_below="@+id/LabelLot" android:id="@+id/TextLotName"
+				android:text="LOTNAME" android:textSize="18dp"
+				android:layout_marginLeft="10dp" android:textColor="@color/white"></TextView>
+			<TextView android:layout_toRightOf="@+id/ImageLot"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_below="@+id/TextLotName" android:id="@+id/LabelDescription"
+				android:text="Description :" android:textSize="16dp"
+				android:layout_marginLeft="10dp" android:textColor="@color/white"></TextView>
+			<TextView android:layout_toRightOf="@+id/ImageLot"
+				android:layout_below="@+id/LabelDescription" android:id="@+id/TextDescription"
+				android:layout_marginLeft="10dp" android:layout_height="wrap_content"
+				android:lines="4" android:scrollbars="vertical" android:layout_width="190dp" android:textColor="@color/white"></TextView>
+		</RelativeLayout>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textSize="22dp"
+			android:layout_margin="15dp" android:layout_below="@+id/LayoutLot"
+			android:id="@+id/LabelJackPot" android:text="Jackpot en jeu :" android:textColor="@color/white"></TextView>
+
+
+		<TextView android:layout_toRightOf="@+id/LabelJackPot"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:textSize="22dp" android:layout_margin="15dp"
+			android:layout_below="@+id/LayoutLot" android:id="@+id/TextJackpotValue"
+			android:text="1500€" android:textColor="@color/white"></TextView>
+
+		<TextView android:text="PERDU\nRetentez votre chance une prochaine fois"
+			android:layout_below="@+id/LabelLot" android:id="@+id/TextLost"
+			android:padding="10dp" android:textSize="22dp" android:textColor="@color/white"
+			android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+
+
+		<Button android:layout_width="fill_parent"
+			android:layout_height="80dp" android:layout_below="@+id/LabelJackPot"
+			android:text="Jouer" android:textColor="@color/button_play_jp"
+			android:textSize="34dp" android:id="@+id/PlayJackPotBtn"
+			android:visibility="invisible"></Button>
+
+	</RelativeLayout>
+
+</ScrollView>

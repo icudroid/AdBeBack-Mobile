@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/bk">
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/LabelScore"
+		android:text="Votre Score : " android:paddingLeft="15dp"
+		android:visibility="invisible" android:textColor="@color/main_txt_color_white"
+		android:textSize="20dp"></TextView>
+
+	<TextView android:layout_below="@+id/LabelScore" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:id="@+id/TextWrong"
+		android:text="Dommage !!!\nla réponse était : " android:textSize="25dp"
+		android:visibility="gone" android:gravity="center_horizontal" android:layout_marginBottom="15dp"
+		android:textColor="@color/main_txt_color_white"
+	></TextView>
+
+	<ImageButton android:id="@+id/ImageButton01"
+		android:layout_below="@+id/TextWrong" android:layout_height="110dip"
+		android:layout_marginTop="5dip" android:layout_width="fill_parent"></ImageButton>
+	<ImageButton android:id="@+id/ImageButton02"
+		android:layout_below="@+id/ImageButton01" android:layout_height="110dip"
+		android:layout_width="fill_parent"></ImageButton>
+	<ImageButton android:id="@+id/ImageButton03"
+		android:layout_below="@+id/ImageButton02" android:layout_height="110dip"
+		android:layout_width="fill_parent"></ImageButton>
+
+	<TextView android:layout_toRightOf="@+id/LabelScore"
+		android:layout_height="wrap_content" android:id="@+id/TextScore"
+		android:layout_width="fill_parent" android:textColor="@color/main_txt_color_white"
+		android:textSize="20dp"></TextView>
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/TextExplain"
+		android:text="@string/explainGame" android:textSize="16dp"
+		android:layout_centerInParent="true" android:visibility="gone"
+		android:layout_margin="15dip" android:gravity="center"
+		android:textColor="@color/main_txt_color_white"></TextView>
+
+</RelativeLayout>

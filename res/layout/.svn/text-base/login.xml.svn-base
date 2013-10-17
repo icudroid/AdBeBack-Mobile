@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<TextView android:layout_below="@+id/TextError" android:text="Pseudo :"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip" android:id="@+id/LabelLogin"
+		android:textColor="@color/main_txt_color_white"></TextView>
+	<EditText android:layout_below="@+id/LabelLogin" android:text=""
+		android:id="@+id/TextLogin" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"></EditText>
+
+	<TextView android:layout_below="@+id/TextLogin"
+		android:layout_width="wrap_content" android:text="Mot de passe :"
+		android:id="@+id/LabelPwd" android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip" android:textColor="@color/main_txt_color_white"></TextView>
+	<EditText android:layout_below="@+id/LabelPwd" android:text=""
+		android:id="@+id/TextPwd" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:password="true"
+		android:layout_marginLeft="10dp" android:layout_marginRight="10dp"></EditText>
+
+	<CheckBox android:layout_below="@+id/TextPwd"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:id="@+id/CheckBoxLoginAuto" android:text="Connexion automatique"></CheckBox>
+	
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+.gradle
+build/
+generated/
+generated-sources/
+generated-classes/
+generated-classes-apt/
+buildPlugins
+classes
+out
+.idea
+*.info
+*.iml
+*.ipr
+*.iws
+*.ids
+*.orig
+target/
+# Ignore Gradle GUI config
+gradle-app.setting
+gradle.properties
